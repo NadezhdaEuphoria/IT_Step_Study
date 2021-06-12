@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>js</title>
+        <link rel="stylesheet" href="./static/css/style.css">
+
+    </head>
+    <body >
+<!--    <div id="stranger"></div>-->
+    <header class="hero">
+        <div class="container menu border">
+            <a href="#football" id="active">TASK 3</a>
+            <a href="#" id="active2">TRAFFIC LIGHT</a>
+            <a href="#light">TASK 4</a>
+            <a href="#task2">TASK 2</a>
+            <a href="#task1">TASK 1</a>
+            <a href="#task5">TASK 5</a>
+            <a href="#task6">TASK 6</a>
+            <div class="space"></div>
+            <button class="mobile__btn">
+                <img src="./static/img/menu-button-of-three-horizontal-lines.png" alt="twitter">
+            </button>
+            <div class="social">
+
+            </div>
+        </div>
+        <div class="container hero__col">
+            <div onclick="moveBall(event)" class="football">
+                <img src="./static/img/field.jpg" alt="field" id="football">
+                <img src="./static/svg/ball.svg"  alt="ball" class="ball" id="ball">
+            </div>
+        </div>
+        <div class="container hero__col2 " id="light">
+            <div class="hero__text2 ">
+                <h1 > TASK 4</h1>
+                <button onclick="switchLight()">switch</button>
+            </div>
+            <div class="fire__img ">
+              <div class="light__wrap">
+                <div class="light__wrap__block">
+                    <div class="light__wrap__block__circle circle__red" id="red"></div>
+                    <div class="light__wrap__block__circle circle__yellow" id="yellow"></div>
+                    <div class="light__wrap__block__circle circle__green" id="green"></div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+
+        <div class="container hero__col3" id="task2">
+            <div class="hero__text2 ">
+                <h1 id=""> TASK 2</h1>
+                <button id="myBtn">Открыть</button>
+                </div>
+                <div class="fire__img ">
+                    <div id="myModal" class="modal">
+
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p>HELLO from Modal Window!</p>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- The Modal -->
+
+            </div>
+        </div>
+
+
+
+        <div class="container hero__col" id="task1">
+
+        <div class="container hero__col2">
+            <div class="hero__text2 ">
+                <h1 > Task 1</h1>
+            </div>
+            <div class="fire__img input-style">
+                <p input-style__p>Enter your name (can't contain digits)</p>
+                <input type="text" id="input_1" placeholder="name">
+            </div>
+        </div>
+
+        </div>
+
+
+
+
+
+        <div class="container hero__col" id="task5">
+
+            <div class="container hero__col2">
+                <div class="hero__text2 " id="div">
+                    <h1 > Task 5</h1>
+                </div>
+                <div class="fire__img input-style">
+
+                    <h1>
+                        <ol>
+                            <li id="k1" onclick="F1(1)">ТАМАРА ГОРІХА ЗЕРНЯ, «ДОЦЯ»</li>
+                            <li id="k2" onclick="F1(2)">ТІНА ГАЛЬЯНОВА, «ХИМЕРОСХОВИЩЕ»</li>
+                            <li id="k3" onclick="F1(3)">ПЕТРО ЯЦЕНКО, “МАГНЕТИЗМ”</li>
+                            <li id="k4" onclick="F1(4)">КИРИЛО КРУТОРОГОВ, “#БОМБАРДИР”</li>
+                            <li id="k5" onclick="F1(5)">ВОЛОДИМИР ЛИС, “СТОЛІТТЯ ЯКОВА”</li>
+                        </ol>
+                    </h1>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="container hero__col" id="task6">
+
+            <div class="container hero__col2">
+                <div class="hero__text2 " >
+                    <h1 > Task 6</h1>
+                </div>
+                <div class="fire__img input-style btn">
+                    <div class="btn--block">
+                        <div class="btn--block__left">
+                            <div class="tooltip2">
+                                <button class="tooltip2">button</button>
+                                <span class="tooltiptext2">Tooltip text</span>
+                        </div>
+                        </div>
+                        <div class="btn--block__right">
+                            <div class="tooltip1">
+                                <span class="tooltiptext1">Tooltip text</span>
+                            <button class="tooltip1">button</button>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+    <!--<script src="sta"></script>-->
+        <script src="static/js/libs.min.js"></script>
+    <script src="static/js/mouse.js"></script>
+
+
+    </body>
+</html>
