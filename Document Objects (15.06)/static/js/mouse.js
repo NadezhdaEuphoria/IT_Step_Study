@@ -5,7 +5,6 @@
 //     Искать такие ссылки в списке и устанавливать им дополни-
 // тельные стили необходимо с помощью JS.
 
-let textList  = document.querySelectorAll(".test")[0].innerText;
 let elemNode = document.querySelectorAll('a')
 let elem =  Array.from(elemNode)
 
