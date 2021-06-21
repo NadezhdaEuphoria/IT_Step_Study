@@ -44,6 +44,21 @@ elem.forEach(function(item) {
 // новится жирным (с помощью CSS).
 
 
+
+
+
+
+let list = document.querySelectorAll('.js-ul-folder');
+
+list.forEach(function(item, ) {
+        item.addEventListener('click',
+            (e) => {
+                item.classList.toggle('js-li-style-none')
+                item.classList.toggle('js-li-style-display')
+            })
+});
+
+
 //
 // Задание 3
 // Создать html-страницу со списком книг.
