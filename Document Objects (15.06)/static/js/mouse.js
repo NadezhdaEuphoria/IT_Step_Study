@@ -29,10 +29,10 @@ elem.forEach(function(item) {
     item.addEventListener('mouseover',
         (e) => {
             item.style.color = "white"
-})
+        })
     item.addEventListener('mouseout',
         (e) => {
-              item.style.color = "black"
+            item.style.color = "black"
         })
 });
 
@@ -46,17 +46,54 @@ elem.forEach(function(item) {
 
 
 
+let list = document.querySelectorAll('.js-ul-folder li');
+
+list.forEach(function(item, i) {
+    let child = item.closest("li")
+
+    item.addEventListener('click',
+        (e) => {
+            let childArr = e.target.childNodes
+            for (i = 0; i < childArr.length; i++) {
+                childArr.classList.toggle('js-li-style-none')
+            }
 
 
-let list = document.querySelectorAll('.js-ul-folder');
 
-list.forEach(function(item, ) {
-        item.addEventListener('click',
-            (e) => {
-                item.classList.toggle('js-li-style-none')
-                item.classList.toggle('js-li-style-display')
-            })
-});
+
+            // childArr.forEach(function(item) {
+            //     // console.log(item)
+            //     // item.classList.toggle('js-li-style-none')
+            //     b = document.querySelector('.js-ul-folder ul');
+            //     c = document.querySelector('.js-ul-folder2 ul');
+            //     f = document.querySelector('.js-ul-folder3 ul');
+            //     // b.classList.toggle('js-li-style-none')
+            //     // c.classList.toggle('js-li-style-none')
+            //     // f.classList.toggle('js-li-style-none')
+            //     console.log(b + "b")
+            //     console.log(c + "c")
+            //     console.log(f + "f")
+        })
+})
+
+
+
+
+
+
+
+// if(child.getAttribute("class") === null) {
+//
+//     child.classList.toggle('js-li-style-none')
+// } else if (child.getAttribute("class") === "js-li-style-none") {
+//     child.classList.toggle('js-li-style-display')
+// }
+//              })
+// });
+
+
+
+
 
 
 //
@@ -83,7 +120,26 @@ list.forEach(function(item, ) {
 // таний клавиш.
 
 
+document.addEventListener('keydown', function(event) {
+    if (event.ctrlKey && event.key === 'e') {
+        event.preventDefault();
+        event.stopPropagation();
+        texta.value = text.innerHTML;
+        text.style.display = "none"
+        texta.style.display = "block"
+    }
+    if (event.ctrlKey && event.key === 's') {
+        event.preventDefault();
+        event.stopPropagation();
+        text.innerHTML = texta.value;
+        texta.style.display = "none"
+        text.style.display = "block"
+    }
+});
 
+function F1(){
+
+}
 
 // Задание 5
 // Создать html-страницу с большой таблицей.
