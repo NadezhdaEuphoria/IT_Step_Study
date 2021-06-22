@@ -5,6 +5,7 @@
 //     Искать такие ссылки в списке и устанавливать им дополни-
 // тельные стили необходимо с помощью JS.
 
+let textList  = document.querySelectorAll(".test")[0].innerText;
 let elemNode = document.querySelectorAll('a')
 let elem =  Array.from(elemNode)
 
@@ -42,21 +43,6 @@ elem.forEach(function(item) {
 //     При клике на элемент списка, он должен сворачиваться или
 // разворачиваться. При наведении на элемент, шрифт должен ста-
 // новится жирным (с помощью CSS).
-
-
-
-
-
-
-let list = document.querySelectorAll('.js-ul-folder');
-
-list.forEach(function(item, ) {
-        item.addEventListener('click',
-            (e) => {
-                item.classList.toggle('js-li-style-none')
-                item.classList.toggle('js-li-style-display')
-            })
-});
 
 
 //
