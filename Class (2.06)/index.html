@@ -1,209 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>js</title>
-    <link rel="stylesheet" href="./static/css/style.css">
-    <script src="http://ajax.googleapis.com/
-ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <style>
-        a:hover{
-            font-weight:bold;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>классы</title>
 </head>
-<body >
 
-<!--    <div id="stranger"></div>-->
-<!--    <header class="hero">-->
-<!--        <div class="container menu border">-->
-<!--            <a href="#football" id="active">Задание 1</a>-->
-<!--            <a href="#" id="active2">TRAFFIC LIGHT</a>-->
-<!--            <a href="#light">Задание 2</a>-->
-<!--            <a href="#task2">Задание 3</a>-->
-<!--            <a href="#task1">Задание 4</a>-->
-<!--            <a href="#task5">Задание 5</a>-->
-<!--            <a href="#task6">Задание 6</a>-->
-<!--            <div class="space"></div>-->
-<!--            <button class="mobile__btn">-->
-<!--                <img src="./static/img/menu-button-of-three-horizontal-lines.png" alt="twitter">-->
-<!--            </button>-->
-<!--            <div class="social">-->
-
-<!--            </div>-->
-</div>
-<div class="container hero__col">
-    <div class="fire__img2">
-        <h1>Задание 1</h1>
-        <ul class="js-ul-list">
-            <li class="test" ><a href="index.html" >index.html</a></li>
-            <li class="test"><a href="http://google.com" >http://google.com</a></li>
-            <li class="test"><a href="https://mystat.itstep.org" >https://mystat.itstep.org</a></li>
-            <li class="test"><a href="/images/cat.jpg" >/images/cat.jpg</a></li>
-            <li class="test"><a href="/local/path" >/local/path</a></li>
-        </ul>
-    </div>
-</div>
-<!--        <div class="container hero__col2 " id="light">-->
-<!--            <div class="fire__img2">-->
-<!--                <h1>Задание 2</h1>-->
-<!--                <ul class="js-ul-folder">-->
-<!--                <li>This PC-->
-<!--                    <ul class="js-ul-folder2">-->
-<!--                        <li >Local Disk (C:)-->
-<!--                        <ul >-->
-<!--                            <li>Program Files</li>-->
-<!--                            <li>Users</li>-->
-<!--                            <li>Windows</li>-->
-<!--                        </ul></li>-->
-<!--                        <ul class="js-ul-folder3">-->
-<!--                        <li>-->
-<!--                            Local Disk (D:)-->
-
-<!--                            <ul >-->
-<!--                                <li >New Folder 1</li>-->
-<!--                                <li >New Folder 2</li>-->
-<!--                                <li >New Folder 3</li>-->
-<!--                            </ul></li>-->
-<!--                        </li>-->
-<!--                        <li> Local Disk (E:)</li>-->
-<!--                        </li>-->
-<!--                    </ul>-->
-<!--                </li>-->
-<!--                </ul>-->
-<!--                    <hr>-->
-<!--            </div>-->
-<!--        </div>-->
+<body>
+    <div class="container">
+        <h1>Задачи</h1>
+        <div class="space" style="text-align:center;">
+            <p>
+                <i>Задание 1.</i>
+                Реализовать класс, описывающий окружность. В классе долж-
+                ны быть следующие компоненты:
+                ■■ поле, хранящее радиус окружности;
+                ■■ get-свойство, возвращающее радиус окружности;
+                ■■ set-свойство, устанавливающее радиус окружности;
+                ■■ get-свойство, возвращающее диаметр окружности;
+                ■■ метод, вычисляющий площадь окружности;
+                ■■ метод, вычисляющий длину окружности.
+                Продемонстрировать работу свойств и методов.
+            </p>
+            <br>
+            <br>
+            <input list="r" id="p4a" type="text" placeholder="радиус" onclick="this.value=''">
+            <datalist id="r">
+                <option value="10"></option>
+                <option value="20">
+                <option value="5">
+            </datalist>
+            <br>
+            <div class="button">
+                <button onclick="setRadius(p4a.value)">1. установить радиус</button>
+                <button onclick="getDiameter()">показать диаметр</button>
+                <button onclick="circleArea()">вычислить площадь </button>
+                <button onclick="circlePerimeter()">вычислить периметр </button>
+            </div>
 
 
 
+        <div class="space" style="text-align:center;">
+            <p>
+                <i> Задание 2.</i>
+                Реализовать класс, описывающий html элемент.
+                Класс HtmlElement должен содержать внутри себя:
+                ■■ название тега;
+                ■■ самозакрывающийся тег или нет;
+                ■■ текстовое содержимое;
+                ■■ массив атрибутов;
+                ■■ массив стилей;
+                ■■ массив вложенных таких же тегов;
+                метод для установки атрибута;
+                ■■ метод для установки стиля;
+                ■■ метод для добавления вложенного элемента в конец теку-
+                щего элемента;
+                ■■ метод для добавления вложенного элемента в начало те-
+                кущего элемента;
+                ■■ метод getHtml(), который возвращает html код в виде
+                строки, включая html код вложенных элементов.
+                С помощью написанного класса реализовать следующий блок
+                и добавить его на страницу с помощью document.write().
+            </p>
+            <div class="button">
+                <button onclick="show()">вывести</button>
+            </div>
 
+            <div class="out">
+                <p id="out"></p>
+            </div>
 
+        <div class="space" style="text-align:center;">
+            <p>
+                <i> Задание 3. </i>
+                Задание 3
+                Реализовать класс, который описывает css класс.
+                Класс CssClass должен содержать внутри себя:
+                ■■ название css класса;
+                ■■ массив стилей;
+                ■■ метод для установки стиля;
+                ■■ метод для удаления стиля;
+                ■■ метод getCss(), который возвращает css код в виде строки.
+            </p>
+            <div class="button">
+                <button onclick="showCss()">показать</button>
+            </div>
+            <div class="out">
+                <p id="out3"></p>
+            </div>
+            <p id="pp3"></p>
+            <p id="pp3a"></p>
 
-</div>
+            <div class="space" style="text-align:center;">
+                <p>
+                    <i> Задание 4. </i>
+                    Реализовать класс, описывающий блок html документ.
+                    Класс HtmlBlock должен содержать внутри себя:
+                    ■■ коллекцию стилей, описанных с помощью класса CssClass;
+                    ■■ корневой элемент, описанный с помощью класса
+                    HtmlElement;
+                    ■■ метод getCode(), который возвращает строку с html ко-
+                    дом (сначала теги style с описанием всех классов, а потом
+                    все html содержимое из корневого тега и его вложенных
+                    элементов).
+                    С помощью написанных классов реализовать следующий блок
+                    (см. рис. 2) и добавить его на страницу с помощью document.write().
+                </p>
+                <div class="button">
+                    <button onclick="showBlock()">показать</button>
+                </div>
+                <br>
 
+                <br>
+                <br>
+                <div class="out">
 
-<div class="container hero__col" id="task5">
-    <h1>Задание 2</h1>-->
-    <ul>
-        <li><span class="Collapsable onul"><a>Categories</a></span>
-            <ul>
-                <li><a>Arts</a></li>
-                <li><span class="Collapsable onul"><a>Health</a></span>
-                    <ul>
-                        <li><a>Medicine</a></li>
-                        <li><a>Nutrition</a></li>
-                        <li><a>LifeStyle</a></li>
-                    </ul>
-                </li>
-                <li><a>Shopping</a></li>
-                <li><span class="Collapsable onul"><a>Society</a></span>
-                    <ul>
-                        <li><a>Politics</a></li>
-                        <li><a>Religion</a></li>
-                        <li><a>Culture</a></li>
-                        <li><a>Government</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-    </ul>
-</div>
-
-
-
-
-<div class="container hero__col" id="task7">
-
-    <div class="container hero__col2">
-        <div class="hero__text2 " id="div">
-            <h1 >Задание 3</h1>
-        </div>
-        <div class="fire__img input-style">
-
-            <ol>
-                <li onclick="Check(this)">Book 1</li>
-                <li onclick="Check(this)">Book 2</li>
-                <li onclick="Check(this)">Book 3</li>
-                <li onclick="Check(this)">Book 4</li>
-            </ol>
-
-        </div>
-    </div>
-
-</div>
-
-
-<div class="container hero__col2 " id="light4">
-    <div class="fire__img3">
-        <h1>Задание 4</h1>
-        <p>
-            press Ctrl+E for edit text
-        </p>
-        <p>
-            press Ctrl+S for save text
-        </p>
-        <hr>
-
-        <div id="text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias aperiam cum dolorum eaque exercitationem expedita nam, nemo omnis
-            perferendis praesentium quam quas quia quos, reiciendis saepe totam, velit voluptate.
-            Accusamus eum incidunt inventore nesciunt? Ad deserunt error iure minus nisi quam quibusdam tempore.
-            Molestiae nostrum quia quidem rem totam! Corporis eaque est quae rerum similique ut vero. Aspernatur,
-            libero.Ab mollitia ratione rem sint. Amet blanditiis eligendi et excepturi quibusdam voluptates.
-            Asperiores cumque dolorem doloribus, ea eos illo in ipsam quas quasi quo, tempore temporibus vel veniam voluptate
-            voluptatibus!Animi fugit, sunt? Expedita nesciunt provident sit voluptate. Ab explicabo harum incidunt obcaecati quo tempora.
-            Beatae deleniti laboriosam quod reiciendis voluptatibus. Delectus ea id ipsa obcaecati possimus, quis sequi sunt?
-            Accusantium consectetur corporis debitis delectus earum eos esse facere fuga hic ipsam iure minus mollitia officiis,
-            pariatur perferendis porro provident repellat similique unde veritatis? Delectus eligendi perspiciatis porro repudiandae rerum.
-            Aut quod, recusandae. Architecto aut, dolore, dolorum eos itaque iure molestias natus neque odio quis quisquam quos similique
-            ut veniam vitae? Asperiores dolorem esse eveniet harum nostrum voluptas voluptates voluptatum!At dolores eum fugit id illum
-            nihil obcaecati provident quas sunt unde. A culpa, eligendi explicabo fugiat iste similique. Ad commodi cum libero molestias,
-            mollitia natus quas quod similique voluptates!Aliquid assumenda corporis distinctio, dolorum facere fugit itaque laborum non
-            officia pariatur praesentium provident quaerat quibusdam quidem rem rerum ullam vitae. Autem consequatur cumque illum odio, quasi
-            quo quod vel!
-        </div>
-        <textarea style="width: 100%; height: 100%; display: none;" id="texta" rows="20" cols="175"></textarea>
-
-
-    </div>
-
-
-</div>
-
-
-
-
-
-
-<div class="container hero__col2 " id="light2">
-    <div class="fire__img3">
-        <h1>Задание 5</h1>
-        <p>
-            press Ctrl+E for edit text
-        </p>
-        <p>
-            press Ctrl+S for save text
-        </p>
-        <hr>
-
-
-        <textarea style="width: 100%; height: 100%; display: none;" id="texta" rows="20" cols="175"></textarea>
-
-
-    </div>
-
-
-</div>
-
-
-
-<!--<script src="sta"></script>-->
-<script src="static/js/libs.min.js"></script>
-<script src="static/js/mouse.js"></script>
-
-
+                    <p id="out4"></p>
+                </div>
+                <p id="pp4"></p>
+                    </div>
+                </div>
 </body>
+<script src="js/scriptTwo.js"></script>
+</body>
+
 </html>
