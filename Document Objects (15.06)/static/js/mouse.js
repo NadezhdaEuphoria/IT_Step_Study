@@ -44,55 +44,10 @@ elem.forEach(function(item) {
 // новится жирным (с помощью CSS).
 
 
-
-
-let list = document.querySelectorAll('.js-ul-folder li');
-
-list.forEach(function(item, i) {
-    let child = item.closest("li")
-
-    item.addEventListener('click',
-        (e) => {
-            let childArr = e.target.childNodes
-            for (i = 0; i < childArr.length; i++) {
-                childArr.classList.toggle('js-li-style-none')
-            }
-
-
-
-
-            // childArr.forEach(function(item) {
-            //     // console.log(item)
-            //     // item.classList.toggle('js-li-style-none')
-            //     b = document.querySelector('.js-ul-folder ul');
-            //     c = document.querySelector('.js-ul-folder2 ul');
-            //     f = document.querySelector('.js-ul-folder3 ul');
-            //     // b.classList.toggle('js-li-style-none')
-            //     // c.classList.toggle('js-li-style-none')
-            //     // f.classList.toggle('js-li-style-none')
-            //     console.log(b + "b")
-            //     console.log(c + "c")
-            //     console.log(f + "f")
-        })
-})
-
-
-
-
-
-
-
-// if(child.getAttribute("class") === null) {
-//
-//     child.classList.toggle('js-li-style-none')
-// } else if (child.getAttribute("class") === "js-li-style-none") {
-//     child.classList.toggle('js-li-style-display')
-// }
-//              })
-// });
-
-
-
+$(".Collapsable").click(function () {
+    $(this).parent().children().toggle();
+    $(this).toggle();
+}) ;
 
 
 
@@ -107,7 +62,9 @@ list.forEach(function(item, i) {
 // была зажата клавиша Shift, то к выделению добавляются все
 // элементы в промежутке от предыдущего кликнутого до текущего.
 
-
+function Check(a){
+    a.style.background = a.style.background=='white'? 'orange':'white';
+}
 
 //
 // Задание 4
@@ -137,9 +94,7 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
-function F1(){
-
-}
+function F1() {}
 
 // Задание 5
 // Создать html-страницу с большой таблицей.
