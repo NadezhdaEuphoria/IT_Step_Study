@@ -63,7 +63,7 @@ $(".Collapsable").click(function () {
 // элементы в промежутке от предыдущего кликнутого до текущего.
 
 function Check(a){
-    a.style.background = a.style.background=='white'? 'orange':'white';
+    a.style.background = a.style.background=='wheat'? 'orange':'wheat';
 }
 
 //
@@ -103,6 +103,54 @@ function F1() {}
 // ртированы по возрасту. Учтите, что числовые значения должны
 // сортироваться как числа, а не как строки.
 
+function F01() {
+    let arr = [];
+    arr.push(d11.innerHTML);
+    arr.push(d21.innerHTML);
+    arr.push(d31.innerHTML);
+    arr.push(d41.innerHTML);
+    arr.sort();
+    d11.innerHTML = arr[0];
+    d21.innerHTML = arr[1];
+    d31.innerHTML = arr[2];
+    d41.innerHTML = arr[3];
+}
+function F2() {
+    let arr = [];
+    arr.push(d12.innerHTML);
+    arr.push(d22.innerHTML);
+    arr.push(d32.innerHTML);
+    arr.push(d42.innerHTML);
+    arr.sort();
+    d12.innerHTML = arr[0];
+    d22.innerHTML = arr[1];
+    d32.innerHTML = arr[2];
+    d42.innerHTML = arr[3];
+}
+function F3() {
+    let arr = [];
+    arr.push(Number(d13.innerHTML));
+    arr.push(Number(d23.innerHTML));
+    arr.push(Number(d33.innerHTML));
+    arr.push(Number(d43.innerHTML));
+    arr.sort(function(a, b){return a-b});
+    d13.innerHTML = arr[0];
+    d23.innerHTML = arr[1];
+    d33.innerHTML = arr[2];
+    d43.innerHTML = arr[3];
+}
+function F4() {
+    let arr = [];
+    arr.push(d14.innerHTML);
+    arr.push(d24.innerHTML);
+    arr.push(d34.innerHTML);
+    arr.push(d44.innerHTML);
+    arr.sort();
+    d14.innerHTML = arr[0];
+    d24.innerHTML = arr[1];
+    d34.innerHTML = arr[2];
+    d44.innerHTML = arr[3];
+}
 
 
 //
