@@ -34,25 +34,14 @@ let sliderImgArr = document.querySelectorAll(".item"),
 
 function ShowSlider(indexSlider) {
     for (let slide of sliderImgArr) {
-        // slide.style.display = "flex"
-        slide.classList.toggle("d-flex")
-        slide.classList.toggle("d-none")
-        console.log(indexSlider)
-        indexSlider++
-        if (indexSlider === 4) {
-            // slide.classList.toggle("d-none")
-            slide.style.display = "flex"
-            console.log("display")
-
-
-        } else {
-
-            slide.style.display = "none"
-            console.log("no display")
-        }
-
+        slide.style.display = "none";
     }
-    // sliderImgArr[indexSlider] = "block"
+    if (indexSlider === 0) {
+        btnPrev.style.backgroundColor = "red";
+    } else if (indexSlider === sliderImgArr.length - 1) {
+        btnNext.style.backgroundColor = "red";
+    }
+    sliderImgArr[indexSlider].style.display = "flex";
 }
 
 ShowSlider(indexSlider)
@@ -61,32 +50,25 @@ function showNextSlide() {
     btnPrev.style.backgroundColor = "gray";
     btnPrev.removeAttribute("disabled", "disabled")
     ShowSlider(++indexSlider)
-    console.log("кнопка" + indexSlider)
-
-    if (indexSlider === 3) {
-        btnNext.setAttribute("disabled", "disabled"),
-            btnNext.style.backgroundColor = "red";
+    if (indexSlider === sliderImgArr.length - 1) {
+        btnNext.setAttribute("disabled", "disabled");
+        // btnNext.style.backgroundColor = "red";
     } else {
-        btnNext.removeAttribute("disabled", "disabled"),
-            btnNext.style.backgroundColor = "gray";
+        btnNext.removeAttribute("disabled", "disabled");
+        btnNext.style.backgroundColor = "gray";
     }
 }
 
 function showPrevSlide() {
-
     ShowSlider(indexSlider--)
     btnNext.style.backgroundColor = "gray";
     btnNext.removeAttribute("disabled", "disabled")
     if (indexSlider === -1) {
-        btnPrev.setAttribute("disabled", "disabled"),
-            btnPrev.style.backgroundColor = "red";
-
+        btnPrev.setAttribute("disabled", "disabled");
     } else {
-        btnPrev.removeAttribute("disabled", "disabled"),
-            btnPrev.style.backgroundColor = "gray";
-
+        btnPrev.removeAttribute("disabled", "disabled");
+        btnPrev.style.backgroundColor = "gray";
     }
-    console.log("кнопка обратно: " + indexSlider)
 }
 
 
@@ -96,20 +78,22 @@ function showPrevSlide() {
 // быть развернут только один блок информации.
 
 let acc = document.getElementsByClassName("accordion"),
+    panels = document.getElementsByClassName("panel"),
     i;
 
 for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function () {
-        this.classList.toggle("active");
         let panel = this.nextElementSibling;
+        for (let j = 0; j < panels.length; j++) {
+            if (i !== j) {
+                panels[j].style.display = "none";
+            }
+        }
+        this.classList.toggle("active");
         if (panel.style.display === "block") {
             panel.style.display = "none";
         } else {
             panel.style.display = "block";
-            panel.addEventListener("mouseout", function () {
-                this.classList.toggle("active");
-                panel.style.display = "none";
-            })
         }
     })
 }
@@ -151,7 +135,6 @@ window.addEventListener("scroll", function () {
     }
 });
 
-
 //
 // Задание 5
 // Создать html-страницу, на которой пользователь может вве-
@@ -159,21 +142,19 @@ window.addEventListener("scroll", function () {
 //     Календарь можно генерировать с помощью таблицы. Начальный
 // день недели всегда должен быть понедельник.
 
-
-let calendarBody = document.querySelector('.calendar .calendar-body'),
-    dayInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
-    userDay = Number(p1c.value),
-    userMonth = p1a.value,
-    userYear = Number(p1b.value);
-a1.innerHTML = "TODAY IS: " + userDay + " of " + userMonth + " , " + userYear + " year.";
-let userDate = new Date(userMonth + " " + userDay + ", " + userYear),
-    calendarBtn = document.getElementById("calendar-btn");
-
-function genCalendar(date) {
+function genCalendar() {
+    let calendarBody = document.querySelector('.calendar .calendar-body'),
+        dayInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
+        userDay = Number(p1c.value),
+        userMonth = p1a.value,
+        userYear = Number(p1b.value),
+        userDate = new Date(userMonth + " " + userDay + ", " + userYear);
+    a1.innerHTML = "TODAY IS: " + userDay + " of " + userMonth + " , " + userYear + " year.";
+    let date = userDate;
     let curDay = date.getDate();
     date.setDate(1);
-    let startDay = date.getDay(userDay);
-    let daysTotal = !(date.getFullYear(userYear) % 4) && date.getMonth(userMonth) === 1 ? 29 : dayInMonth[date.getMonth()];
+    let startDay = date.getDay();
+    let daysTotal = !(date.getFullYear() % 4) && date.getMonth() === 1 ? 29 : dayInMonth[date.getMonth()];
     let content = '';
     for (let i = 0; i < startDay; i++) {
         content += '<div class="no-day"></div>';
@@ -187,5 +168,3 @@ function genCalendar(date) {
     }
     calendarBody.innerHTML = content;
 }
-
-calendarBtn.onclick = genCalendar(userDate);
