@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>js</title>
+    <link rel="stylesheet" href="./static/css/style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<!--<div class="container hero__col">-->
+<!--    <div class="fire__img2">-->
+<!--        <h1>Задание 1</h1>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+
+
+
+
+
+
+    <div class="container posts">
+        <h1>Задание 1</h1>
+        <div class="container-posts">
+        <script>
+
+            for (let i = 0; i < 2; i++)
+                document.write("<div class=\"red container\"><div class=\'red-flex\'><p>Name</p><div class=\"space\"></div><p>" + i + 1 + ".06.2021</p></div>" +
+                    "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam beatae consequuntur deleniti " +
+                    "est hic labore laborum mollitia natus nisi, numquam odio, quia quod sed tempora totam vel, vero voluptas? " +
+                    "<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto consequatur, debitis dolor doloremque in" +
+                    " itaque magnam nostrum numquam obcaecati perspiciatis quod repellendus rerum saepe, unde. Cupiditate omnis provident reiciendis." +
+                    "</span><span>Amet, aperiam architecto at, consectetur ea esse facere fugiat fugit laboriosam libero maxime, minima minus mollitia nemo " +
+                    "numquam odio officiis praesentium quisquam recusandae reprehenderit soluta vel veritatis vero voluptatem voluptatum?</span><span>Aliquam " +
+                    "culpa error et, excepturi facere minima necessitatibus nemo nihil nostrum officia praesentium saepe sint voluptate? Amet animi atque blanditiis consequatur" +
+                    " est, inventore itaque minus odio possimus quidem. Culpa, sequi.</span><span>Accusamus aliquam at aut beatae cupiditate dicta doloribus earum error eum ex " +
+                    "exercitationem fuga hic impedit inventore, minus nemo nobis pariatur quo sit velit? Cumque officiis quos reprehenderit temporibus voluptatem!</span>" +
+                    "<span>Asperiores aut consectetur doloremque in libero molestiae sunt velit! Blanditiis doloribus hic in iste nam nihil provident, quas quasi veritatis?" +
+                    " Alias dicta eius ipsum quasi quibusdam reiciendis soluta suscipit voluptatum.</span></p></div><br>");
+
+        </script>
+        </div>
+        <div class="posts-form">
+
+        </div>
+
+    </div>
+</div>
+
+
+
+<div class="container ">
+    <h1>Задание 2</h1>
+    <div class="container-questions container red">
+        <div class="show1">
+    <p> 1. How many letters are there in the word "Hello"?</p>
+        <input type="radio" name="first-question" id="one">5
+        <input type="radio" name="first-question"  id="two">2
+        <br>
+        <button id="btn-next">Next</button>
+        </div>
+
+        <div class="show">
+        <p>2. How many letters are there in the word "Word"?</p>
+        <input type="radio" name="second-question" id="2one">4
+        <input type="radio" name="second-question"  id="2two">5
+        <br>
+        <button id="btn-finish">Finish</button>
+        </div>
+    </div>
+
+    <div class="answers">
+    <p id="result"></p>
+    </div>
+
+</div>
+</div>
+
+
+
+
+<div class="container ">
+    <h1>Задание 3</h1>
+    <div class="container-questions container red">
+
+        <input type="radio" name="style" id="style1" checked>Bold
+        <input type="radio" name="style"  id="style2">Underline
+        <input type="radio" name="style" id="style3">Italics
+        <input type="radio" name="style"  id="style4">Left
+        <input type="radio" name="style" id="style5">Right
+        <input type="radio" name="style"  id="style6">Justify
+        <br>
+        <div class="style-change">
+        <textarea name="style" id="style-textarea"  cols="53" rows="10">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, ex explicabo facere in quam repudiandae sint!Aliquid assumenda explicabo hic, in ipsa minus, nam necessitatibus perferendis quos sint veniam voluptatibus.
+Ad animi aperiam distinctio eaque esse exercitationem expedita explicabo facilis fuga, harum libero maiores molestias non nostrum
+        </textarea>
+            <button id="style-btn">🡺</button>
+            <div class="style-change-result">
+                <p id="p1"></p>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+
+
+
+
+
+<div class="container ">
+    <h1>Задание 4</h1>
+    <div class="books-container container red" id="all-books">
+              <div class="books" >
+            <div class="books-img">
+            <img src="static/img/js1.jpg" alt="book1">
+            </div>
+            <p id="book-name1">JavaScript: The Definitive Guide, 7th Edition</p>
+            <p class="book-author">
+                <small>
+                    David Flanagan
+                </small>
+            </p>
+            <p class="book-price">
+                16$
+            </p>
+            <button id="select-btn1">select</button>
+        </div>
+        <div class="books">
+            <div class="books-img">
+                <img src="static/img/js2.jpg" alt="book2">
+            </div>
+            <p id="book-name2">You Don't Know JS: Scope & Closures 1st Edition</p>
+            <p class="book-author">
+                <small>
+                    Kyle Simpson
+                </small>
+            </p>
+            <p class="book-price">
+                20$
+            </p>
+            <button id="select-btn2">select</button>
+        </div>
+
+        <div class="books">
+            <div class="books-img">
+                <img src="static/img/js3.jpg" alt="book3">
+            </div>
+            <p id="book-name3">JavaScript and JQuery: Interactive Front-End</p>
+            <p class="book-author">
+                <small>
+                    Jon Duckett
+                </small>
+            </p>
+            <p class="book-price">
+                26$
+            </p>
+            <button id="select-btn3">select</button>
+        </div>
+
+
+
+
+    <div class="books books-inputs">
+<p>book:</p>
+       <input type="text" id="book-name">
+        <p>quantity: </p>
+       <input type="text" value="1">
+        <p>name: </p>
+        <input type="text" value="username" id="a1">
+        <p>adress: </p>
+        <input type="text" value="Shevchenko 488" id="a3">
+        <p>delivery-date: </p>
+        <input type="text" value="5.07" id="a2">
+        <textarea name="comment" id="book-coment-input" cols="30" rows="5" placeholder="comment..."></textarea>
+
+        <button id="buy-book-btn">buy</button>
+    </div>
+
+
+
+</div>
+
+    <div class=" container red" id="booksResult">
+
+    </div>
+
+</div>
+
+
+
+
+
+
+<div class="container ">
+    <h1>Задание 5</h1>
+    <div class="student-container container red">
+        <div class="students">
+            <p>
+                group
+            </p>
+            <select>
+                <option>Group 1</option>
+                <option>Group 2</option>
+            </select>
+            <p>
+                lesson
+            </p>
+            <select>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+            </select>
+            <p></p>
+            <button>select</button>
+            <hr>
+        </div>
+
+        <div class="students">
+        <p>Topic:</p>
+        <input type="text">
+
+        <div class="students">
+        <p id="studentName"></p>
+        <p id="a0"></p>
+        </div>
+        <hr>
+            <div class="students">
+        <p id="student1">John Doe</p>
+        <input type="checkbox" name="student" value="present">
+        <hr>
+            </div>
+            <div class="students">
+        <p id="student2">Shevchenko Ann</p>
+        <input type="checkbox" name="student" value="present">
+        <hr>
+                </div>
+            <div class="students">
+        <p id="student3">Kovalenko Jenia</p>
+        <input type="checkbox" name="student" value="present">
+        <hr>
+            </div>
+        <button id="save">save</button>
+
+</div>
+</div>
+
+
+
+
+
+    <div class="container ">
+        <h1>Задание 6</h1>
+        <div class="student-container container red" id="bilets">
+            <div class="students">
+                <p>
+                    Direction
+                </p>
+                <select>
+                    <option>Odessa - Lviv</option>
+                    <option>Cherkassy - Kyiv</option>
+                </select>
+                <p>
+                    Date:
+                </p>
+                <input type="text" value="05.07.2021">
+                <p></p>
+                <button id="search">Search</button>
+                <hr>
+            </div>
+
+<p id="order"></p>
+
+            </div>
+
+
+
+
+        </div>
+
+    <p></p>
+
+<!--<script src="sta"></script>-->
+<script src="static/js/libs.min.js"></script>
+<script src="static/js/mouse.js"></script>
+
+
+</body>
+</html>
