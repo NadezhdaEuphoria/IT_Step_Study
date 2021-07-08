@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>js</title>
+    <link rel="stylesheet" href="./static/css/style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="container hero__col">
+    <div class="fire__img2">
+        <h1>Задание 1</h1>
+        <div class="slidecontainer">
+            <input type="range" min="1" max="100" value="50" class="slider" id="js-input">
+            <p>Value: <span id="js-input-icon"></span></p>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<div class="container hero__col">
+    <div class="fire__img2">
+        <h1>Задание 2</h1>
+        <div class="slider__div">
+            <button class="js-slider-btn-previous" onclick="showPrevSlide()">
+
+                &#10094;
+            </button>
+            <div class="slider__img__block">
+                <div class="item">
+                    <img src="static/img/pexels-arthouse-studio-4627269.jpg">
+                </div>
+                <div class="item">
+                    <img src="static/img/pexels-josh-hild-2422483.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="static/img/pexels-rachel-claire-4846377.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="static/img/pexels-sangeet-rao-4660487.jpg" alt="">
+                </div>
+            </div>
+            <button class="js-slider-btn-next" onclick="showNextSlide()">
+
+                &#10095;
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<div class="container hero__col">
+    <div class="fire__img2">
+        <h1>Задание 3</h1>
+        <div class="block-info">
+
+
+            <button class="accordion"> What is lorem Ipsum?</button>
+            <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium autem enim eveniet illum
+                    itaque
+                    maiores, nemo nihil possimus qui quibusdam recusandae repudiandae, suscipit, tempora totam veritatis
+                    voluptate
+                    voluptatem voluptatibus.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium autem enim eveniet illum
+                    itaque
+                    maiores, nemo nihil possimus qui quibusdam recusandae repudiandae, suscipit, tempora totam veritatis
+                    voluptate
+                    voluptatem voluptatibus.
+
+                </p>
+            </div>
+
+            <button class="accordion">Where does it come from?</button>
+            <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium autem enim eveniet illum
+                    itaque
+                    maiores, nemo nihil possimus qui quibusdam recusandae repudiandae, suscipit, tempora totam veritatis
+                    voluptate
+                    voluptatem voluptatibus
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium autem enim eveniet illum
+                    itaque
+                    maiores, nemo nihil possimus qui quibusdam recusandae repudiandae, suscipit, tempora totam veritatis
+                    voluptate
+                    voluptatem voluptatibus.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium autem enim eveniet illum
+                    itaque
+                    maiores, nemo nihil possimus qui quibusdam recusandae repudiandae, suscipit, tempora totam veritatis
+                    voluptate
+                    voluptatem voluptatibus.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium autem enim eveniet illum
+                    itaque
+                    maiores, nemo nihil possimus qui quibusdam recusandae repudiandae, suscipit, tempora totam veritatis
+                    voluptate
+                    voluptatem voluptatibus.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium autem enim eveniet illum
+                    itaque
+                    maiores, nemo nihil possimus qui quibusdam recusandae repudiandae, suscipit, tempora totam veritatis
+                    voluptate
+                    voluptatem voluptatibus.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium autem enim eveniet illum
+                    itaque
+                    maiores, nemo nihil possimus qui quibusdam recusandae repudiandae, suscipit, tempora totam veritatis
+                    voluptate
+                    voluptatem voluptatibus.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium autem enim eveniet illum
+                    itaque
+                    maiores, nemo nihil possimus qui quibusdam recusandae repudiandae, suscipit, tempora totam veritatis
+                    voluptate
+                    voluptatem voluptatibus..</p>
+            </div>
+
+            <button class="accordion"> Why do we use it?</button>
+            <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium autem enim eveniet illum
+                    itaque
+                    maiores, nemo nihil possimus qui quibusdam recusandae repudiandae, suscipit, tempora totam veritatis
+                    voluptate
+                    voluptatem voluptatibus  Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium autem enim eveniet illum
+                    itaque
+                    maiores, nemo nihil possimus qui quibusdam recusandae repudiandae, suscipit, tempora totam veritatis
+                    voluptate
+                    voluptatem voluptatibus.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium autem enim eveniet illum
+                    itaque
+                    maiores, nemo nihil possimus qui quibusdam recusandae repudiandae, suscipit, tempora totam veritatis
+                    voluptate
+                    voluptatem voluptatibus..</p>
+            </div>
+
+            <button class="accordion"> Where can I get some?</button>
+            <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium autem enim eveniet illum
+                    itaque
+                    maiores, nemo nihil possimus qui quibusdam recusandae repudiandae, suscipit, tempora totam veritatis
+                    voluptate  Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium autem enim eveniet illum
+                    itaque
+                    maiores, nemo nihil possimus qui quibusdam recusandae repudiandae, suscipit, tempora totam veritatis
+                    voluptate
+                    voluptatem voluptatibus.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium autem enim eveniet illum
+                    itaque
+                    maiores, nemo nihil possimus qui quibusdam recusandae repudiandae, suscipit, tempora totam veritatis
+                    voluptate
+                    voluptatem voluptatibus.
+                    voluptatem voluptatibus.</p>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+</div>
+
+
+<div>
+    <div id="infinite-scroll">
+        <h1>Задание 4</h1>
+        <div>
+            <script>
+                for (let i = 0; i < 50; i++)
+                    document.write("<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam beatae consequuntur deleniti " +
+                        "est hic labore laborum mollitia natus nisi, numquam odio, quia quod sed tempora totam vel, vero voluptas?</div>");
+            </script>
+        </div>
+    </div>
+</div>
+<div id="arrowTop" hidden></div>
+
+
+<div class="container hero__col">
+    <div class="fire__img2">
+        <h1>Задание 5</h1>
+        <div class="calendar__div">
+            <div class="calendar__div__input">
+                <p>Day:</p>
+                <input type="text" id="p1c" value="11" >
+                <p>Month:</p>
+                <input type="text" id="p1a" value="December" >
+                <p>Year:</p>
+                <input type="text" id="p1b" value="1993">
+            </div>
+            <button id="calendar-btn" onclick="genCalendar()">Generate</button>
+            <p id="a1"><span>August, 2018</span></p>
+
+
+            <div class="calendar">
+                <div class="calendar-head">
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                </div>
+                <div class="calendar-body"></div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+</div>
+
+
+
+
+
+
+
+<!--<script src="sta"></script>-->
+<script src="static/js/libs.min.js"></script>
+<script src="static/js/mouse.js"></script>
+
+
+</body>
+</html>
