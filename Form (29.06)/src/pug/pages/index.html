@@ -16,15 +16,9 @@
 <!--</div>-->
 
 
-
-
-
-
-
-
-    <div class="container posts">
-        <h1>Задание 1</h1>
-        <div class="container-posts">
+<div class="container posts">
+    <h1>Задание 1</h1>
+    <div class="container-posts">
         <script>
 
             for (let i = 0; i < 2; i++)
@@ -42,44 +36,41 @@
                     " Alias dicta eius ipsum quasi quibusdam reiciendis soluta suscipit voluptatum.</span></p></div><br>");
 
         </script>
-        </div>
-        <div class="posts-form">
-
-        </div>
+    </div>
+    <div class="posts-form">
 
     </div>
-</div>
 
+</div>
+</div>
 
 
 <div class="container ">
     <h1>Задание 2</h1>
     <div class="container-questions container red">
         <div class="show1">
-    <p> 1. How many letters are there in the word "Hello"?</p>
-        <input type="radio" name="first-question" id="one">5
-        <input type="radio" name="first-question"  id="two">2
-        <br>
-        <button id="btn-next">Next</button>
+            <p> 1. How many letters are there in the word "Hello"?</p>
+            <input type="radio" name="first-question" id="one">5
+            <input type="radio" name="first-question" id="two">2
+            <br>
+            <button id="btn-next">Next</button>
         </div>
 
         <div class="show">
-        <p>2. How many letters are there in the word "Word"?</p>
-        <input type="radio" name="second-question" id="2one">4
-        <input type="radio" name="second-question"  id="2two">5
-        <br>
-        <button id="btn-finish">Finish</button>
+            <p>2. How many letters are there in the word "Word"?</p>
+            <input type="radio" name="second-question" id="2one">4
+            <input type="radio" name="second-question" id="2two">5
+            <br>
+            <button id="btn-finish">Finish</button>
         </div>
     </div>
 
     <div class="answers">
-    <p id="result"></p>
+        <p id="result"></p>
     </div>
 
 </div>
 </div>
-
-
 
 
 <div class="container ">
@@ -87,14 +78,14 @@
     <div class="container-questions container red">
 
         <input type="radio" name="style" id="style1" checked>Bold
-        <input type="radio" name="style"  id="style2">Underline
+        <input type="radio" name="style" id="style2">Underline
         <input type="radio" name="style" id="style3">Italics
-        <input type="radio" name="style"  id="style4">Left
+        <input type="radio" name="style" id="style4">Left
         <input type="radio" name="style" id="style5">Right
-        <input type="radio" name="style"  id="style6">Justify
+        <input type="radio" name="style" id="style6">Justify
         <br>
         <div class="style-change">
-        <textarea name="style" id="style-textarea"  cols="53" rows="10">
+        <textarea name="style" id="style-textarea" cols="53" rows="10">
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, ex explicabo facere in quam repudiandae sint!Aliquid assumenda explicabo hic, in ipsa minus, nam necessitatibus perferendis quos sint veniam voluptatibus.
 Ad animi aperiam distinctio eaque esse exercitationem expedita explicabo facilis fuga, harum libero maiores molestias non nostrum
         </textarea>
@@ -109,15 +100,12 @@ Ad animi aperiam distinctio eaque esse exercitationem expedita explicabo facilis
 </div>
 
 
-
-
-
 <div class="container ">
     <h1>Задание 4</h1>
     <div class="books-container container red" id="all-books">
-              <div class="books" >
+        <div class="books">
             <div class="books-img">
-            <img src="static/img/js1.jpg" alt="book1">
+                <img src="static/img/js1.jpg" alt="book1">
             </div>
             <p id="book-name1">JavaScript: The Definitive Guide, 7th Edition</p>
             <p class="book-author">
@@ -163,27 +151,24 @@ Ad animi aperiam distinctio eaque esse exercitationem expedita explicabo facilis
         </div>
 
 
+        <div class="books books-inputs">
+            <p>book:</p>
+            <input type="text" id="book-name">
+            <p>quantity: </p>
+            <input type="text" value="1">
+            <p>name: </p>
+            <input type="text" value="username" id="a1">
+            <p>adress: </p>
+            <input type="text" value="Shevchenko 488" id="a3">
+            <p>delivery-date: </p>
+            <input type="text" value="5.07" id="a2">
+            <textarea name="comment" id="book-coment-input" cols="30" rows="5" placeholder="comment..."></textarea>
+
+            <button id="buy-book-btn">buy</button>
+        </div>
 
 
-    <div class="books books-inputs">
-<p>book:</p>
-       <input type="text" id="book-name">
-        <p>quantity: </p>
-       <input type="text" value="1">
-        <p>name: </p>
-        <input type="text" value="username" id="a1">
-        <p>adress: </p>
-        <input type="text" value="Shevchenko 488" id="a3">
-        <p>delivery-date: </p>
-        <input type="text" value="5.07" id="a2">
-        <textarea name="comment" id="book-coment-input" cols="30" rows="5" placeholder="comment..."></textarea>
-
-        <button id="buy-book-btn">buy</button>
     </div>
-
-
-
-</div>
 
     <div class=" container red" id="booksResult">
 
@@ -192,97 +177,98 @@ Ad animi aperiam distinctio eaque esse exercitationem expedita explicabo facilis
 </div>
 
 
-
-
-
-
 <div class="container ">
     <h1>Задание 5</h1>
-    <div class="student-container container red">
+    <div class="student-container container red student-present">
         <div class="students">
+            <div class="ok-btn-hide">
+                <p>
+                    group
+                </p>
+                <select id="select">
+                    <option value="gr1">Group 1</option>
+                    <option value="gr2">Group 2</option>
+                    <option value="gr3">Group 3</option>
+                    <option value="gr4">Group 4</option>
+                </select>
+                <p>
+                    lesson
+                </p>
+                <select id="select2">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                <p></p>
+                <button id="select-btn">select</button>
+                <button id="ok">ok</button>
+                <hr>
+            </div>
+        </div>
+
+        <div class="students">
+            <div class="topic-div">
+                <p>Topic:</p>
+                <input type="text" id="topic">
+            </div>
+            <div class="students">
+                <p id="studentName"></p>
+                <p id="a01"></p>
+                <br>
+                <p id="a0"></p>
+            </div>
+            <div class="students-all">
+                <div class="students">
+                    <p id="student1">student 1</p>
+                    <input type="checkbox" name="student" value="present" id="check1">
+
+                </div>
+                <div class="students">
+                    <p id="student2">student 2</p>
+                    <input type="checkbox" name="student" value="present" id="check2">
+
+                </div>
+                <div class="students">
+                    <p id="student3">student 3</p>
+                    <input type="checkbox" name="student" value="present" id="check3">
+
+                </div>
+                <button id="save">save</button>
+                <button id="selectAll">select all</button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <h1>Задание 6</h1>
+    <div class="student-container container red" id="bilets">
+        <div class="students del">
             <p>
-                group
+                Direction
             </p>
-            <select>
-                <option>Group 1</option>
-                <option>Group 2</option>
+            <select id="select3">
+                <option value="odessa">Odessa - Lviv</option>
+                <option value="che">Cherkassy - Kyiv</option>
             </select>
             <p>
-                lesson
+                Date:
             </p>
-            <select>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-            </select>
+            <input type="text" id="date1" value="05.07.2021">
             <p></p>
-            <button>select</button>
+            <button id="search">Search</button>
             <hr>
         </div>
 
-        <div class="students">
-        <p>Topic:</p>
-        <input type="text">
-
-        <div class="students">
-        <p id="studentName"></p>
-        <p id="a0"></p>
-        </div>
-        <hr>
-            <div class="students">
-        <p id="student1">John Doe</p>
-        <input type="checkbox" name="student" value="present">
-        <hr>
-            </div>
-            <div class="students">
-        <p id="student2">Shevchenko Ann</p>
-        <input type="checkbox" name="student" value="present">
-        <hr>
-                </div>
-            <div class="students">
-        <p id="student3">Kovalenko Jenia</p>
-        <input type="checkbox" name="student" value="present">
-        <hr>
-            </div>
-        <button id="save">save</button>
+        <p id="order"></p>
+        <p id="order2"></p>
+        <p id="order3"></p>
+    </div>
 
 </div>
-</div>
 
 
-
-
-
-    <div class="container ">
-        <h1>Задание 6</h1>
-        <div class="student-container container red" id="bilets">
-            <div class="students">
-                <p>
-                    Direction
-                </p>
-                <select>
-                    <option>Odessa - Lviv</option>
-                    <option>Cherkassy - Kyiv</option>
-                </select>
-                <p>
-                    Date:
-                </p>
-                <input type="text" value="05.07.2021">
-                <p></p>
-                <button id="search">Search</button>
-                <hr>
-            </div>
-
-<p id="order"></p>
-
-            </div>
-
-
-
-
-        </div>
-
-    <p></p>
+<p></p>
 
 <!--<script src="sta"></script>-->
 <script src="static/js/libs.min.js"></script>

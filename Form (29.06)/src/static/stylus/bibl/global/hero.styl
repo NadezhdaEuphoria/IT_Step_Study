@@ -314,240 +314,11 @@ button:focus, button:hover
     list-style square
 
 
-.test a
-  color black
-
-.js-a-style
-  border-bottom 2px dotted orange
-  color orange !important
-
-
-.js-a-style2
-  border-bottom 2px dotted red
-  color red !important
-
-.js-li-style-none
-  display none
-
-
-.js-li-style-display
-  display flex
-
-// ТРЕКБАР ДИЗАЙН
-.slidecontainer
-  width: 100%
-  height 100%
-
-
-.slider
-  -webkit-appearance: none
-  width 60%
-  height 10px
-  border-radius 5px
-  background white
-  outline none
-  opacity 0.7
-  -webkit-transition .2s
-  transition opacity .2s
-
-.slider:hover
-  opacity 1
-
-
-.slider::-webkit-slider-thumb
-  -webkit-appearance none
-  appearance none
-  width 23px
-  height 24px
-  border 0
-  background url('../img/airplane-48.png')
-  background-size contain
-  cursor pointer
 
 
 h1
   width 100%
-
-.slider__div
-  width 800px
-  height 427px
-  display flex
-  flex-direction row
-
-.slider__div button
-  background wheat
-  border none
-  box-shadow none
-
-.slider__img__block
-  flex-basis 95%
-
-.slider__img__block img
-  width 100%
-  height 100%
-
-
-.scroll-block-info
-  height 1350px
-  width 85%
-  border saddlebrown 1px solid
-
-  & p, h1
-    padding .5rem .5rem
-
-.calendar__div
-  width 85%
-  height 600px
-  display flex
-  flex-direction column
-  align-items center
-
-  &__input
-    display flex
-    flex-direction row
-    justify-content center
-
-    & p
-      width 5%
-      padding .5rem .5rem
-      margin .7rem 2rem
-
-    & input
-      height 1rem
-      width 55%
-      margin-top 1.2rem
-
-.calendar__div button
-  width 60%
-  margin-bottom 5rem
-
-// календарь
-
-.item
-  display none
-
-.d-none
-  display none
-
-.d-flex
-  display flex
-
-
-// accordion
-
-/* Style the buttons that are used to open and close the accordion panel */
-.accordion {
-  background-color #2b4475
-  color: white;
-  text-transform uppercase
-  cursor: pointer;
-  padding: 18px;
-  width 50vw
-  text-align: left;
-  border: 2px solid transparent;
-  outline: none;
-  transition: 0.4s;
-}
-
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .accordion:hover {
-  background-color: #131d2d;
-
-}
-
-/* Style the accordion panel. Note: hidden by default */
-.panel {
-  background-color #86a4db
-  display: none;
-  overflow: hidden;
-  width 50vw
-
-}
-
-
-.block-info p
-  border none
-  background-color #86a4db
-  color #10131c
-  margin .4rem
-
-//  scroll
-
-#infinite-scroll
-  width 70vw
-  margin 1rem 13rem
-
-
-#arrowTop {
-  height: 9px;
-  width: 14px;
-  position: fixed;
-  bottom: 20px;
-  left: 0%;
-  cursor: pointer;
-}
-
-#arrowTop::before {
-  background:  #d6d2d2;
-  height: 100px;
-  width: 100vw;
-  content: '💬';
-  text-align center
-}
-
-
-
-
-
-//calendar
-
-
-&:before,
-&:after
-  content: " ";
-  display: table;
-
-&:after
-  clear: both;
-
-.calendar
-  width 60px * 7;
-  font-size: 24px;
-  border: solid 3px #afafaf;
-  border-radius: 0px 0px 10px 0px;
-.calendar-head
-  @include clearfix();
-  div
-    float: left;
-    width: 60px;
-    text-align: center;
-    color: #7b7b7b;
-
-
-.calendar-body {
-  @include clearfix();
-  div {
-    position: relative;
-    float: left;
-    box-sizing: border-box;
-    width: 60px - 8px;
-    height: 60px - 8px;
-    margin: 4px;
-    padding-top: 60px/ 5;
-    border-radius: 7px;
-    text-align: center;
-    background: #d98963;
-    color: #3b3b3b;
-    &.no-day {
-      background: none;
-    }
-    &.cur-day {
-      background: #fd7741;
-      color: #fff;
-    }
-  }
-}
-
+  margin-top 5%
 
 
 .red
@@ -556,6 +327,7 @@ h1
   border 1px solid black
   margin 5rem
   width 100%
+
 
 .red p
   padding .4rem
@@ -585,6 +357,7 @@ h1
 
 .style-change
   display flex
+  justify-content center
   &-result
     border 1px solid #868686
     width 50%
@@ -674,4 +447,13 @@ h1
   padding  .5rem
   flex-basis 100%
 
+.container-questions input
+  margin-left 3%
+  margin-bottom 2%
+
+
+.ok-btn-hide
+  display flex
+  flex-direction row
+  align-items center
 
