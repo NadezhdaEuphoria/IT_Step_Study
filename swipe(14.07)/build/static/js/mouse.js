@@ -16,25 +16,31 @@ new Swiper('.image-slider', {
         draggable: true
     },
     grabCursor: true,
-    slideToClickedSlide:true,
+    slideToClickedSlide: true,
     hashNavigation: {
-        watchState:true,
+        watchState: true,
     },
     keyboard: {
-        enabled:true,
-        onlyInViewport:true,
-        pageUpDown:true,
+        enabled: true,
+        onlyInViewport: true,
+        pageUpDown: true,
     },
-    centeredSlides:true,
-    // mousewheel: {
-    //   sensitivity:1,
-    //     eventsTarget: ".image-slider"
-    // },
+
+    freeMode: true,
+    autoplay: {
+        delay: 1000,
+        stopOnLastSlide: false,
+        disableOnInteraction: true,
+    },
+    effect: 'cube',
+    cubeEffect: {
+        slideShadows: true,
+        shadow: true,
+        shadowOffset: 20,
+        shadowScale: 0.94,
+    },
+
 });
-
-
-
-
 
 
 new Swiper('.image-slider2', {
@@ -46,7 +52,7 @@ new Swiper('.image-slider2', {
         },
         // type:'progressbar'
     },
-    slidesPerView:3,
+    slidesPerView: 3,
     scrollbar: {
         el: '.swiper-scrollbar2',
         draggable: true
@@ -54,6 +60,24 @@ new Swiper('.image-slider2', {
     grabCursor: true,
     autoHeight: true,
     slidesPerGroup: 3,
+    initialSlide: 7,
+    loop: true,
+    loopSlides: 3,
+});
+
+
+new Swiper('.image-slider3', {
+    slidesPerView: 3,
+    grabCursor: true,
+    slidesPerGroup: 3,
+    initialSlide: 7,
+    loopSlides: 3,
+    effect: 'coverflow',
+    coverflowEffect: {
+        rotate: 20,
+        stretch: 50,
+        slideShadows: true,
+    },
 });
 
 //
