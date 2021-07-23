@@ -1,0 +1,191 @@
+/* body {
+    background-color: antiquewhite;
+    padding: 0px;
+    margin: 0px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.d-flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.task-1 {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.task-1__header {
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+}
+
+.task-1__header__item {
+    width: 16,6%;
+    background-color: rgb(124, 138, 97);
+    color: white;
+    font-size: 20px;
+    padding: 10px 15px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.task-1__header__item:hover,
+.task-1__header__item:active {
+    background-color: yellowgreen;
+}
+
+.task-1__body {
+    border: 2px solid yellowgreen;
+}
+
+
+.task-1__body__item {
+    display: none;
+}
+
+.task-1__body__item h4{
+    text-align: center;
+}
+
+.task-1__body__item img{
+    width: 20%;
+    margin-right: 20px;
+}
+
+.task-1__body__item.active {
+    display: block;
+}
+
+.task-2 .modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: -100%;
+    transition: all .3s;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.task-2 .modal .active{
+    top: 0;
+    opacity: 1;
+} 
+
+.modal__body {
+    background: rgb(65, 65, 65);
+}
+
+
+ */
+
+
+ .game, .game2 {
+     width: 600px;
+     height: 200px;
+     border-bottom: 1px solid black;
+     margin: auto;
+ }
+
+ .game2 {
+    display: none;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(250, 0, 0);
+    color: white;
+    margin-top: 150px;
+ }
+
+ .game2 p {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2rem 3rem;
+    margin-top: 50px;
+}
+
+ #dino {
+     width: 50px;
+     height: 50px;
+     background-image: url(dino.png);
+     background-size: 50px 50px;
+     position: relative;
+     top: 150px;
+ }
+
+ #cactus {
+    width: 20px;
+    height: 40px;
+    background-image: url(cactus.png);
+    background-size: 20px 40px;
+    position: relative;
+    top: 110px;
+    left: 580px;
+    animation: cactusMovement 2s infinite linear;
+}
+
+@keyframes cactusMovement {
+    0% {
+        left: 580px;
+    }
+
+    100% {
+        left: -20px;
+    }
+}
+
+.jump {
+    animation: jump .5s  linear;  
+}
+
+
+@keyframes jump {
+    0% {
+        top: 150px;
+    }
+
+    30% {
+        top: 30px;
+    }
+
+    50% {
+        top: 80px;
+    }
+
+    80% {
+        top: 130px;
+    }
+
+    100% {
+        top: 150px;
+    }
+}
+
+
+#btn, #btn2 {
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 2rem 3rem;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
