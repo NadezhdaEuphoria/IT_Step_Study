@@ -1,0 +1,156 @@
+body {
+    background-color: rgb(109, 96, 81);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;   
+}
+
+body header {
+    height: 10vh;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+@media screen and (min-width: 37.4375em) {
+
+    body header {
+        width: 600px;
+    }
+}
+
+body header .timer {
+    position: absolute;
+    top: 14%;
+    left: 3%;
+    font-size: 23px;
+    background: violet;
+    width: 8vh;
+    height: 8vh;
+    line-height: 8vh;
+    border-radius: 4vh;
+    text-align: center;
+}
+
+.game {
+    height: 90vh;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 37.4375em) {
+
+    .game {
+        width: 600px;
+    }
+}
+
+.flip-container {
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    perspective: 1000;
+    height: 22%;
+    margin: 1%;
+    cursor: pointer;
+}
+
+.flip-container.flip .flipper {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.flip-container,.front, .back {
+    width: 23%;
+    float: left;
+    border-radius: 12px;
+}
+
+.flipper {
+    -webkit-transition: .6s;
+    -moz-transition: .6s;
+    transition:.6s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    height: 100%;
+    position: relative;
+}
+
+.flipper .front, .flipper .back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    box-shadow: black 0 8px 2px;
+}
+
+.flipper .front {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    background: rgb(82, 67, 67) url("img/back.png") no-repeat center;
+    background-size: contain;
+}
+
+.flipper .back {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    border: 1px solid #E8E8E8;
+}
+
+#anchor{
+    background: white url("img/anchor.png") no-repeat center;
+    background-size: contain;
+}
+
+#compass {
+    background: white url("img/compass.png")no-repeat center;
+    background-size: contain;
+}
+
+#diver {
+    background: white url("img/diver.png")no-repeat center;
+    background-size: contain;
+}
+
+#lighthouse {
+    background: white url("img/lighthouse.png")no-repeat center;
+    background-size: contain;
+}
+
+#pirate {
+    background: white url("img/pirate.png")no-repeat center;
+    background-size: contain;
+}
+
+#prawn {
+    background: white url("img/prawn.png")no-repeat center;
+    background-size: contain;
+}
+
+#starfish {
+    background: white url("img/starfish.png")no-repeat center;
+    background-size: contain;
+}
+
+#whale {
+    background: white url("img/whale.png")no-repeat center;
+    background-size: contain;
+}
+
+
+
