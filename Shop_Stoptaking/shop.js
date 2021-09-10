@@ -210,8 +210,11 @@ let sortByCost = (array) => {
     return 0;
   }
 
+  let totalPrice = pricePerItem.concat(pricePerKilo);
+
   pricePerKilo.sort(compare);
   pricePerItem.sort(compare);
+  totalPrice.sort(compare);
 
   let prefix = "$";
 
@@ -221,10 +224,9 @@ let sortByCost = (array) => {
   pricePerItem = pricePerItem.map(function (el) {
     return prefix + el;
   });
-
-  let totalPrice = [];
-  totalPrice.push(pricePerKilo, pricePerItem);
-  totalPrice.sort(compare);
+  totalPrice = totalPrice.map(function (el) {
+    return prefix + el;
+  });
 
   console.log(`price per kilo ${pricePerKilo}`);
   console.log(`price per item ${pricePerItem}`);
@@ -234,6 +236,41 @@ let sortByCost = (array) => {
 sortByCost(products);
 
 // - Print to the terminal the type of oranges with the least price (`The cheapest orange type is: ${type}`);
+
+let getType = (array) => {
+  let price = [];
+  let type;
+  array.forEach((object) => {
+    if (object.item === "orange") {
+      parseFloat(object.pricePerKilo.replace("$", "").split(",").join("."));
+      price.push(object.pricePerKilo);
+
+      function compare(a, b) {
+        if (a < b) {
+          return -1;
+        }
+        if (a > b) {
+          return 1;
+        }
+        return 0;
+      }
+
+      price.sort(compare);
+      let cheapestOrange = price[0];
+      if (object.pricePerKilo === cheapestOrange) {
+        type = object.type;
+      }
+    }
+  });
+
+  console.log(`The cheapest orange type is: ${type}, ${price[0]}`);
+};
+getType(products);
+
 // - Print to the console the cost of the goods by item name (`Apples - ${costApples},
 // Pineapples - ${costPineapples}, Watermelons - ${costWatermelons}, Oranges - ${costOranges}`);
+
+
+
+
 // - Print to the console the result of the execution of this function.
