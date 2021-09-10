@@ -130,9 +130,11 @@ let countItems = (array) => {
   array.forEach((object) => {
     if (object.item == "watermelon") {
       quantity++;
+      return quantity;
     }
     if (object.item == "apple") {
       weight += object.weight;
+      return weight;
     }
   });
   console.log(`Watermelons - ${quantity}`);
@@ -150,7 +152,54 @@ let sortItems = (array) => {
       sort.push(object.item);
     }
   });
-  sort.sort((a, b) => a - b);
+  //   sort.sort((a, b) => a - b);
+  function compare(a, b) {
+    if (a < b) {
+      return -1;
+    }
+    if (a > b) {
+      return 1;
+    }
+
+    return 0;
+  }
+  sort.sort(compare);
+  return sort;
+};
+
+//delete duolicats
+
+let sort = sortItems(products),
+  makeSet = new Set(sort);
+sort = [...makeSet];
+console.log(sort);
+
+// - Sort the array by cost of the record and print it to the console;
+
+let sortByCost = (array) => {
+  //   console.log(pricePerItem);
+  //   console.log(pricePerKilo);
+  let pricePerKilo = [],
+    pricePerItem = [];
+  array.forEach((object) => {
+    if (typeof object.pricePerKilo !== "undefined") {
+      //   console.log(object.pricePerKilo);
+      console.log(object.pricePerKilo);
+      pricePerKilo.push(
+        parseFloat(object.pricePerKilo.replace("$", "").split(",").join("."))
+      );
+      console.log(object.pricePerKilo);
+      console.log(pricePerKilo);
+      return pricePerKilo;
+    } else if (typeof object.pricePerItem !== "undefined") {
+      pricePerItem.push(
+        parseFloat(object.pricePerItem.replace("$", "").split(",").join("."))
+      );
+      //   console.log(object.pricePerItem);
+      return pricePerItem;
+    }
+  });
+
   function compare(a, b) {
     if (a < b) {
       return -1;
@@ -161,14 +210,29 @@ let sortItems = (array) => {
     return 0;
   }
 
-  sort.sort(compare);
+  pricePerKilo.sort(compare);
+  pricePerItem.sort(compare);
 
-  console.log(sort);
+  let prefix = "$";
+
+  pricePerKilo = pricePerKilo.map(function (el) {
+    return prefix + el;
+  });
+  pricePerItem = pricePerItem.map(function (el) {
+    return prefix + el;
+  });
+
+  let totalPrice = [];
+  totalPrice.push(pricePerKilo, pricePerItem);
+  totalPrice.sort(compare);
+
+  console.log(`price per kilo ${pricePerKilo}`);
+  console.log(`price per item ${pricePerItem}`);
+  console.log(`total price ${totalPrice}`);
 };
 
-sortItems(products);
+sortByCost(products);
 
-// - Sort the array by cost of the record and print it to the console;
 // - Print to the terminal the type of oranges with the least price (`The cheapest orange type is: ${type}`);
 // - Print to the console the cost of the goods by item name (`Apples - ${costApples},
 // Pineapples - ${costPineapples}, Watermelons - ${costWatermelons}, Oranges - ${costOranges}`);
